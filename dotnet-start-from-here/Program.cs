@@ -16,6 +16,9 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapGet("/", () => "Hello World!");
+app.MapGet("/", () => { 
+    Log.Information("teste");
+    return "Hello world";
+});
 
 app.Run();

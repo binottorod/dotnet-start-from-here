@@ -6,6 +6,9 @@ services:
     build:
       context: .
       dockerfile: dotnet-start-from-here/Dockerfile
+    ports:
+      - 8080:8080
+      - 8081:8081
   project-setup-db:
     image: postgres:latest
     container_name: Database
